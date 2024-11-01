@@ -1,141 +1,160 @@
+/* Set the background color of the HTML document */
 html {
-    background: #000000;
+    background: #000000; /* Black background */
 }
 
-/* Bonus */
+/* Bonus: Move the spider up when the HTML is hovered */
 html:hover .spider {
-    top: -120%;
+    top: -120%; /* Position the spider above the visible area */
 }
 
+/* Basic styling for the spider element */
 .spider {
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 30%;
+    position: absolute; /* Allow positioning anywhere in the parent */
+    display: inline-block; /* Inline block for layout */
+    top: 0; /* Start at the top */
+    left: 30%; /* Position slightly off-center to the left */
 
-    /* 4. Animatie */
-    animation: swing 0.1s infinite;
-    transform-origin: top;
+    /* Animation for swinging motion */
+    animation: swing 0.1s infinite; /* Swing animation */
+    transform-origin: top; /* Anchor point for transformation */
 
-    /* Bonus */
-    transition: 0.1s ease-in-out;
+    /* Bonus: Smooth transition on hover */
+    transition: 0.1s ease-in-out; /* Transition effect */
 }
 
+/* Styling for the spider's web */
 .spider .spiderweb {
-    width: 2px;
-    height: 200px;
-    margin-left: 49px;
-    background: rgba(255,255,255, .7);
+    width: 2px; /* Thin web line */
+    height: 200px; /* Length of the web */
+    margin-left: 49px; /* Center the web relative to the spider body */
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
 }
 
+/* Main body of the spider */
 .spider .body {
-    width: 100px;
-    height: 80px;
-    background: blue;
-    position: relative;
-    border-radius: 50%;
+    width: 100px; /* Width of the spider body */
+    height: 80px; /* Height of the spider body */
+    background: blue; /* Blue body color */
+    position: relative; /* Position relative for child elements */
+    border-radius: 50%; /* Round body */
 }
 
+/* Eyes of the spider */
 .spider .body .eye {
-    width: 33px;
-    height: 33px;
-    position: absolute;
-    bottom: 20px;
-    background: #fff;
-    border-radius: 50%;
+    width: 33px; /* Width of each eye */
+    height: 33px; /* Height of each eye */
+    position: absolute; /* Position absolutely within the body */
+    bottom: 20px; /* Position from the bottom of the body */
+    background: #fff; /* White color for eyes */
+    border-radius: 50%; /* Round eyes */
 }
 
+/* Position the left eye */
 .spider .body .eye.left {
-    left: 15px;
+    left: 15px; /* Position left eye */
 }
 
+/* Position the right eye */
 .spider .body .eye.right {
-    right: 15px;
+    right: 15px; /* Position right eye */
 }
 
+/* Pupil styling for each eye */
 .spider .body .eye:after {
-    background: rgb(255, 0, 242);
-    width: 7px;
-    height: 7px;
-    content: '';
-    display: block;
-    margin: 55%;
-    border-radius: 50%;
+    background: rgb(255, 0, 242); /* Pink color for pupils */
+    width: 7px; /* Width of the pupil */
+    height: 7px; /* Height of the pupil */
+    content: ''; /* Empty content for pseudo-element */
+    display: block; /* Block display */
+    margin: 55%; /* Center the pupil */
+    border-radius: 50%; /* Round pupil */
 
-    /* 3. Animatie */
-    animation: look 0.1s infinite;
+    /* Animation for pupil movement */
+    animation: look 0.1s infinite; /* Look animation */
 }
 
+/* Styling for the spider's legs */
 .spider .legs .leg {
-    width: 80px;
-    height: 40px;
-    margin-top: -20px;
-    border: 5px solid transparent;
-    border-top-color: red;
-    border-radius: 40px 40px 0 0;
+    width: 80px; /* Width of each leg */
+    height: 40px; /* Height of each leg */
+    margin-top: -20px; /* Negative margin to position legs */
+    border: 5px solid transparent; /* Border for leg shape */
+    border-top-color: red; /* Red color for the top of the leg */
+    border-radius: 40px 40px 0 0; /* Round top corners for leg */
 }
 
+/* Positioning for the spider's legs */
 .spider .legs {
-    position: absolute;
-    bottom: -10%;
-    z-index: -1;
+    position: absolute; /* Position absolutely within the spider */
+    bottom: -10%; /* Position below the spider body */
+    z-index: -1; /* Place legs behind the body */
 }
 
+/* Position the left legs */
 .spider .legs.left {
-    left: -70%;
+    left: -70%; /* Position left legs */
 }
+
+/* Position the right legs */
 .spider .legs.right {
-    right: -60%;
+    right: -60%; /* Position right legs */
 }
 
-.legs.left .leg:nth-child(1){
-    transform: rotate(10deg);
-    margin-left: 10px;
-}
-.legs.right .leg:nth-child(1){
-    transform: rotate(-10deg);
-    margin-left: -10px;
+/* Styling and positioning for the first left leg */
+.legs.left .leg:nth-child(1) {
+    transform: rotate(10deg); /* Slightly rotate leg */
+    margin-left: 10px; /* Adjust left margin */
 }
 
-
-.legs.left .leg:nth-child(2){
-    transform: rotate(-20deg);
-    margin-left: 20px;
-}
-.legs.right .leg:nth-child(2){
-    transform: rotate(20deg);
-    margin-left: -20px;
+/* Styling and positioning for the first right leg */
+.legs.right .leg:nth-child(1) {
+    transform: rotate(-10deg); /* Slightly rotate leg */
+    margin-left: -10px; /* Adjust right margin */
 }
 
-
-.legs.left .leg:nth-child(3){
-    transform: rotate(-50deg);
-    margin-left: 30px;
-}
-.legs.right .leg:nth-child(3){
-    transform: rotate(50deg);
-    margin-left: -30px;
+/* Styling and positioning for the second left leg */
+.legs.left .leg:nth-child(2) {
+    transform: rotate(-20deg); /* Rotate leg */
+    margin-left: 20px; /* Adjust left margin */
 }
 
-/* 1. Animatie */
+/* Styling and positioning for the second right leg */
+.legs.right .leg:nth-child(2) {
+    transform: rotate(20deg); /* Rotate leg */
+    margin-left: -20px; /* Adjust right margin */
+}
+
+/* Styling and positioning for the third left leg */
+.legs.left .leg:nth-child(3) {
+    transform: rotate(-50deg); /* Rotate leg */
+    margin-left: 30px; /* Adjust left margin */
+}
+
+/* Styling and positioning for the third right leg */
+.legs.right .leg:nth-child(3) {
+    transform: rotate(50deg); /* Rotate leg */
+    margin-left: -30px; /* Adjust right margin */
+}
+
+/* Keyframes for pupil animation */
 @keyframes look {
     0%, 40%, 100% {
-        transform: translateX(0); 
+        transform: translateX(0); /* Original position */
     }
 
     45%, 95% {
-        transform: translateX(-110%);
+        transform: translateX(-110%); /* Move pupil to the left */
     }
 }
 
-
-/* 3. Animatie */
+/* Keyframes for swinging animation */
 @keyframes swing {
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(0); /* Original position */
     }
 
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-20px); /* Swing upwards */
     }
 }
